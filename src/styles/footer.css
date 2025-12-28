@@ -1,0 +1,81 @@
+.k-footer {
+    padding-bottom: 18px
+}
+
+.k-footer-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02))
+}
+
+.k-footer-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.k-footer-title {
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-bottom: 6px
+}
+
+.k-footer-links {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.k-footer-links a {
+    color: rgba(234, 242, 248, .9);
+    padding: .35rem .55rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, .10);
+    background: rgba(255, 255, 255, .02);
+}
+
+.k-footer-links a:hover {
+    background: rgba(255, 255, 255, .05)
+}
+
+.k-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.k-footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.k-footer-social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .03);
+    color: rgba(234, 242, 248, .92);
+}
+
+.k-footer-social a:hover {
+    background: rgba(255, 255, 255, .06)
+}
+
+@media (max-width: 768px) {
+    .k-footer-top {
+        flex-direction: column
+    }
+
+    .k-footer-links {
+        justify-content: flex-start
+    }
+
+    .k-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start
+    }
+}

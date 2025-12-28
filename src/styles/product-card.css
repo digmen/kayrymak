@@ -1,0 +1,66 @@
+.k-prod {
+    height: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.k-prod-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px
+}
+
+.k-prod-thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .03);
+    display: grid;
+    place-items: center;
+}
+
+.k-prod-thumb-inner {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(48, 209, 166, .22), rgba(26, 163, 255, .20));
+    display: grid;
+    place-items: center;
+    color: rgba(234, 242, 248, .92);
+    font-size: 22px;
+}
+
+.k-prod-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.k-prod-title {
+    font-weight: 900;
+    font-size: 1.05rem;
+    line-height: 1.2
+}
+
+.k-prod-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
+.k-prod-bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.k-prod-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap
+}

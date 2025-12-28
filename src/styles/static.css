@@ -1,0 +1,68 @@
+.k-static {
+    border-radius: 22px
+}
+
+.k-static-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.k-static-item {
+    padding: 14px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, .10);
+    background: rgba(255, 255, 255, .02);
+}
+
+.k-static-ico {
+    width: 44px;
+    height: 44px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, rgba(48, 209, 166, .18), rgba(26, 163, 255, .16));
+    border: 1px solid rgba(255, 255, 255, .10);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.k-static-title {
+    font-weight: 900;
+    margin-bottom: 6px
+}
+
+.k-contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 14px;
+}
+
+.k-contact-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, .10);
+    background: rgba(255, 255, 255, .02);
+}
+
+.k-contact-item i {
+    font-size: 18px;
+    margin-top: 2px
+}
+
+.k-contact-title {
+    font-weight: 900
+}
+
+@media (max-width: 992px) {
+    .k-static-grid {
+        grid-template-columns: 1fr
+    }
+
+    .k-contact-grid {
+        grid-template-columns: 1fr
+    }
+}
