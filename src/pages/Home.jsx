@@ -56,7 +56,11 @@ export default function Home() {
 
                     <div className="k-hero-right">
                         <div className="k-hero-panel k-card">
-                            <div className="k-hero-panel-top">
+                            <div className="k-hero-media">
+                                <img className="k-hero-media-img" src="/images/hero-tackle.svg" alt="Рыболовные аксессуары" />
+                            </div>
+
+                            <div className="k-hero-panel-top mt-3">
                                 <div className="k-pill">
                                     <i className="bi bi-lightning-charge"></i>
                                     <span>Подбор по категориям</span>
@@ -70,7 +74,9 @@ export default function Home() {
                             <div className="k-hero-cats mt-3">
                                 {categories.map(c => (
                                     <Link key={c.key} to={`/catalog?cat=${c.key}`} className="k-cat-tile">
-                                        <span className="k-cat-ico"><i className="bi bi-water"></i></span>
+                                        <span className="k-cat-ico">
+                                            <img className="k-cat-ico-img" src={c.image} alt={c.title} />
+                                        </span>
                                         <span className="k-cat-title">{c.title}</span>
                                         <span className="k-cat-go"><i className="bi bi-arrow-right"></i></span>
                                     </Link>

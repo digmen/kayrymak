@@ -9,9 +9,7 @@ export default function ProductCard({ p, categoryTitle }) {
         <div className="k-prod k-card p-3">
             <div className="k-prod-top">
                 <div className="k-prod-thumb">
-                    <div className="k-prod-thumb-inner">
-                        <i className="bi bi-fish"></i>
-                    </div>
+                    <img className="k-prod-img" src={p.image} alt={p.title} loading="lazy" />
                 </div>
 
                 <div className="k-prod-meta">

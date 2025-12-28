@@ -32,9 +32,7 @@ export default function Product() {
             <div className="k-prod-page">
                 <div className="k-prod-left k-card p-3 p-md-4">
                     <div className="k-prod-hero">
-                        <div className="k-prod-hero-inner">
-                            <i className="bi bi-fish"></i>
-                        </div>
+                        <img className="k-prod-hero-img" src={p.image} alt={p.title} />
                     </div>
 
                     <div className="k-prod-tags mt-3">
@@ -114,7 +112,10 @@ export default function Product() {
 
                     <div className="k-card p-3 p-md-4 mt-3">
                         <div className="k-muted">Рекомендуем</div>
-                        <div className="mt-2">Смотри также товары из категории: <Link to={`/catalog?cat=${p.category}`} className="k-inline-link">{catTitle}</Link></div>
+                        <div className="mt-2">
+                            Смотри также товары из категории:{" "}
+                            <Link to={`/catalog?cat=${p.category}`} className="k-inline-link">{catTitle}</Link>
+                        </div>
                     </div>
                 </div>
             </div>

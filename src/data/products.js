@@ -1,10 +1,10 @@
 export const categories = [
-    { key: "lures", title: "Приманки" },
-    { key: "hooks", title: "Крючки" },
-    { key: "line", title: "Леска и шнур" },
-    { key: "reels", title: "Катушки" },
-    { key: "rods", title: "Удилища" },
-    { key: "accessories", title: "Аксессуары" },
+    { key: "lures", title: "Приманки", image: "/images/cat-lures.svg" },
+    { key: "hooks", title: "Крючки", image: "/images/cat-hooks.svg" },
+    { key: "line", title: "Леска и шнур", image: "/images/cat-line.svg" },
+    { key: "reels", title: "Катушки", image: "/images/cat-reels.svg" },
+    { key: "rods", title: "Удилища", image: "/images/cat-rods.svg" },
+    { key: "accessories", title: "Аксессуары", image: "/images/cat-accessories.svg" },
 ];
 
 export const products = [
@@ -12,6 +12,7 @@ export const products = [
         id: "p001",
         title: "Воблер Minnow 90",
         category: "lures",
+        image: "/images/cat-lures.svg",
         price: 690,
         rating: 4.8,
         stock: 18,
@@ -23,6 +24,7 @@ export const products = [
         id: "p002",
         title: "Силикон 3.5\" (набор 10 шт.)",
         category: "lures",
+        image: "/images/cat-lures.svg",
         price: 450,
         rating: 4.6,
         stock: 34,
@@ -34,6 +36,7 @@ export const products = [
         id: "p003",
         title: "Крючки офсет №2 (20 шт.)",
         category: "hooks",
+        image: "/images/cat-hooks.svg",
         price: 320,
         rating: 4.5,
         stock: 52,
@@ -45,6 +48,7 @@ export const products = [
         id: "p004",
         title: "Тройники усиленные №6 (10 шт.)",
         category: "hooks",
+        image: "/images/cat-hooks.svg",
         price: 380,
         rating: 4.7,
         stock: 27,
@@ -56,6 +60,7 @@ export const products = [
         id: "p005",
         title: "Плетёный шнур 0.12 (150 м)",
         category: "line",
+        image: "/images/cat-line.svg",
         price: 1190,
         rating: 4.7,
         stock: 21,
@@ -67,6 +72,7 @@ export const products = [
         id: "p006",
         title: "Флюорокарбон 0.30 (50 м)",
         category: "line",
+        image: "/images/cat-line.svg",
         price: 990,
         rating: 4.6,
         stock: 16,
@@ -78,6 +84,7 @@ export const products = [
         id: "p007",
         title: "Катушка 2500 (6+1)",
         category: "reels",
+        image: "/images/cat-reels.svg",
         price: 3490,
         rating: 4.4,
         stock: 10,
@@ -89,6 +96,7 @@ export const products = [
         id: "p008",
         title: "Катушка 3000 (металл шпуля)",
         category: "reels",
+        image: "/images/cat-reels.svg",
         price: 4490,
         rating: 4.6,
         stock: 8,
@@ -100,6 +108,7 @@ export const products = [
         id: "p009",
         title: "Спиннинг 2.4 м (5–25 г)",
         category: "rods",
+        image: "/images/cat-rods.svg",
         price: 4990,
         rating: 4.7,
         stock: 7,
@@ -111,6 +120,7 @@ export const products = [
         id: "p010",
         title: "Спиннинг 2.1 м (3–12 г)",
         category: "rods",
+        image: "/images/cat-rods.svg",
         price: 4690,
         rating: 4.5,
         stock: 9,
@@ -122,6 +132,7 @@ export const products = [
         id: "p011",
         title: "Застёжки Fast Clip (20 шт.)",
         category: "accessories",
+        image: "/images/cat-accessories.svg",
         price: 240,
         rating: 4.5,
         stock: 60,
@@ -133,6 +144,7 @@ export const products = [
         id: "p012",
         title: "Вертлюги Rolling (20 шт.)",
         category: "accessories",
+        image: "/images/cat-accessories.svg",
         price: 260,
         rating: 4.6,
         stock: 55,
@@ -145,4 +157,9 @@ export const products = [
 export function getCategoryTitle(key) {
     const found = categories.find(c => c.key === key);
     return found ? found.title : "Каталог";
+}
+
+export function getCategoryImage(key) {
+    const found = categories.find(c => c.key === key);
+    return found?.image || "/images/hero-tackle.svg";
 }

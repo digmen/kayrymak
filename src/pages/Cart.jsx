@@ -8,7 +8,7 @@ export default function Cart() {
 
     const resolved = items.map(i => {
         const p = products.find(x => x.id === i.id);
-        return { ...i, stock: p?.stock ?? 0 };
+        return { ...i, image: p?.image, stock: p?.stock ?? 0 };
     });
 
     return (
@@ -41,7 +41,11 @@ export default function Cart() {
                             {resolved.map(i => (
                                 <div key={i.id} className="k-cart-row">
                                     <div className="k-cart-thumb">
-                                        <i className="bi bi-fish"></i>
+                                        {i.image ? (
+                                            <img className="k-cart-img" src={i.image} alt={i.title} loading="lazy" />
+                                        ) : (
+                                            <i className="bi bi-fish"></i>
+                                        )}
                                     </div>
 
                                     <div className="k-cart-info">
@@ -104,9 +108,7 @@ export default function Cart() {
                         <span>Оформить заказ</span>
                     </button>
 
-                    <div className="k-muted mt-3">
-                        Демо-версия: без оплаты и без бекенда.
-                    </div>
+                    <div className="k-muted mt-3">Демо-версия: без оплаты и без бекенда.</div>
 
                     <Link to="/contacts" className="k-btn w-100 mt-2">
                         <i className="bi bi-chat-dots"></i>
